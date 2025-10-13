@@ -224,11 +224,17 @@
         align-items: center;
         transition: all 0.3s linear;
         svg {
-            fill: var(--black-color);
+            stroke: var(--black-color);
             width: 18px;
             height: 18px;
             margin-left: 10px;
             transition: all 0.3s linear;
+        }
+        &:hover {
+            color: var(--primary-color);
+            svg {
+                stroke: var(--primary-color);
+            }
         }
     }
     &__subnavs {

@@ -312,7 +312,6 @@ html::-webkit-scrollbar-thumb,
 body::-webkit-scrollbar-thumb,
 .custom-scroll::-webkit-scrollbar-thumb {
   background-color: var(--scrollbar-thumb-color);
-  border-radius: 8px;
   background-clip: padding-box;
 }
 
@@ -321,6 +320,10 @@ body::-webkit-scrollbar,
 .custom-scroll::-webkit-scrollbar {
   width: 8px;
   background-color: var(--scrollbar-color);
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  border-radius: 8px;
 }
 
 body {
@@ -1515,13 +1518,23 @@ blockquote:before {
   overflow: hidden;
 }
 
-[data-animation=fadeUp] {
+[data-animation=fadeUp],
+[data-animation=fade] {
   opacity: 0;
 }
 
 .fadeUp {
   -webkit-animation-name: fadeUp;
   animation-name: fadeUp;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  animation-name: fade;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: forwards;
@@ -1553,6 +1566,26 @@ blockquote:before {
     opacity: 1;
     -webkit-transform: translateY(0);
     transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 
@@ -1938,12 +1971,20 @@ blockquote:before {
 }
 
 .menu__header svg {
-  fill: var(--black-color);
+  stroke: var(--black-color);
   width: 18px;
   height: 18px;
   margin-left: 10px;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
+}
+
+.menu__header:hover {
+  color: var(--primary-color);
+}
+
+.menu__header:hover svg {
+  stroke: var(--primary-color);
 }
 
 .menu__subnavs {
@@ -2612,6 +2653,10 @@ blockquote:before {
   color: var(--dark-gray-color);
 }
 
+.item-contact a:not(.link):hover {
+  color: var(--primary-color);
+}
+
 .item-contact .h3 {
   font-size: 36px;
   color: var(--black-color);
@@ -2933,6 +2978,10 @@ blockquote:before {
 
 .footer a {
   color: var(--white-color);
+}
+
+.footer a:hover {
+  color: var(--primary-color);
 }
 
 .footer--main .footer__logo {
@@ -3998,7 +4047,7 @@ blockquote:before {
     gap: 10px;
   }
 
-  .project-p__swiper {
+  .project-p__swiper .swiper {
     margin: 0 -5px;
   }
 

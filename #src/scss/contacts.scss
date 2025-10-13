@@ -66,6 +66,9 @@
     &__lbl {
         color: var(--dark-gray-color);
     }
+    a:not(.link):hover {
+        color: var(--primary-color);
+    }
     .h3 {
         font-size: 36px;
         color: var(--black-color);

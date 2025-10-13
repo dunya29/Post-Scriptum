@@ -163,13 +163,14 @@
             }
         }
     }
-     @media (min-width: $bp2) and (max-width: $bp1) {
+    @media (min-width: $bp2) and (max-width: $bp1) {
         .sec-top {
-            h1,.h1 {
+            h1,
+            .h1 {
                 font-size: 74px;
             }
         }
-     }
+    }
     @media (min-width: $bp1) and (min-height: 1024px) {
         &__swiper {
             .swiper-slide {
@@ -186,7 +187,9 @@
     }
     @media (max-width: $bp3) {
         &__swiper {
-            margin: 0 -5px;
+            .swiper {
+                margin: 0 -5px;
+            }
             .swiper-slide {
                 height: 500px;
                 margin: 0 5px;

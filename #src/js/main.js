@@ -1,7 +1,7 @@
 const preloader = document.querySelector(".preloader") 
 let preloaderHiddenTimeOut = 0
 if (preloader) {
-    preloaderHiddenTimeOut = 2000
+    preloaderHiddenTimeOut = 1400
     enableScroll()
     disableScroll()
     setTimeout(() => {

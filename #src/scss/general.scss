@@ -7,12 +7,16 @@ body,
 .custom-scroll {
 	&::-webkit-scrollbar-thumb {
 		background-color: var(--scrollbar-thumb-color);
-		border-radius: 8px;
 		background-clip: padding-box;
 	}
 	&::-webkit-scrollbar {
 		width: 8px;
 		background-color: var(--scrollbar-color);
+	}
+}
+.custom-scroll {
+	&::-webkit-scrollbar-thumb {
+		border-radius: 8px;
 	}
 }
 body {
@@ -1203,7 +1207,7 @@ blockquote {
 		}
 	}
 }
-[data-animation="fadeUp"] {
+[data-animation="fadeUp"],[data-animation="fade"] {
 	opacity: 0;
 }
 .fadeUp {
@@ -1211,7 +1215,11 @@ blockquote {
 	animation-duration: 1s;
 	animation-fill-mode: forwards;
 }
-
+.fade {
+	animation-name: fade;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
 @keyframes fadeUp {
 	0% {
 		opacity: 0;
@@ -1220,5 +1228,13 @@ blockquote {
 	100% {
 		opacity: 1;
 		transform: translateY(0);
+	}
+}
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
 	}
 }

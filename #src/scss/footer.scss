@@ -4,6 +4,9 @@
     background: var(--black-color);
     a {
         color: var(--white-color);
+        &:hover {
+            color: var(--primary-color);
+        }
     }
     &--main {
         .footer__logo {
