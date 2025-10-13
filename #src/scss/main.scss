@@ -1,0 +1,190 @@
+.clients {
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+    &__item {
+        height: 185px;
+        padding: 20px;
+        border-radius: 40px;
+        background: var(--light-gray-color);
+        .media-contain {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    @media (min-width: $bp1), (max-width: $bp4) {
+        &__item {
+            display: none;
+            &:nth-child(-n + 8) {
+                display: block;
+            }
+        }
+    }
+    @media (max-width: $bp1) {
+        &__items {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        &__item {
+            border-radius: 30px;
+        }
+    }
+    @media (max-width: $bp2) {
+        &__item {
+            height: 130px;
+        }
+    }
+    @media (max-width: $bp3) {
+        &__items {
+            gap: 10px;
+        }
+    }
+    @media (max-width: $bp4) {
+        &__items {
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        &__item {
+            height: 78px;
+            padding: 10px 20px;
+        }
+    }
+}
+.recommend {
+    overflow: hidden;
+    .swiper {
+        overflow: visible;
+    }
+    @media (max-width: $bp4) {
+        padding: 30px 0;
+        background: var(--light-gray-color);
+    }
+}
+.item-rec {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    &__logo {
+        height: 70px;
+        padding: 18px 10px;
+        border-radius: 12px;
+        background: var(--white-color);
+        align-content: center;
+        margin-bottom: 30px;
+        img {
+            max-height: 100%;
+            object-fit: contain;
+            margin: auto;
+        }
+    }
+    &__content {
+        margin-bottom: 30px;
+        p {
+            color: var(--dark-gray-color);
+            line-height: 1.4;
+        }
+    }
+    &__info {
+        margin-top: auto;
+    }
+    &__pos {
+        color: var(--dark-gray-color);
+        margin-top: 4px;
+    }
+    @media (max-width: $bp1) {
+        &__logo {
+            height: 60px;
+            padding: 17px 10px;
+            margin-bottom: 20px;
+        }
+        &__content {
+            margin-bottom: 20px;
+            p {
+                font-size: 16px;
+            }
+        }
+        &__info {
+            .h3 {
+                font-size: 18px;
+            }
+        }
+        &__pos {
+            font-size: 16px;
+        }
+    }
+    @media (max-width: $bp4) {
+        background: var(--white-color);
+        &__logo {
+            height: 40px;
+            padding: 10px;
+            background: var(--light-gray-color);
+        }
+    }
+}
+.item-faq {
+    padding: 30px 32px;
+    border-radius: 40px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 16px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    .accordion__content {
+        padding-top: 16px;
+    }
+    .page-content {
+        max-width: 1285px;
+        p {
+            color: var(--dark-gray-color);
+            line-height: 1.4;
+        }
+    }
+    @media (max-width: $bp1) {
+        border-radius: 30px;
+        .page-content {
+            max-width: 932px;
+        }
+    }
+    @media (max-width: $bp2) {
+        padding: 24px;
+    }
+    @media (max-width: $bp3) {
+        padding: 20px;
+        margin-bottom: 10px;
+    }
+    @media (max-width: $bp4) {
+        padding: 0 0 20px;
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid var(--border-color);
+        margin-bottom: 20px;
+        &:last-child {
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        .accordion__icon {
+            background: var(--white-color);
+        }
+        .page-content {
+            p,
+            li {
+                font-size: 16px;
+            }
+        }
+    }
+}
+.faq {
+    @media (max-width: $bp4) {
+        .sec-top {
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        &__inner {
+            padding: 20px;
+            border-radius: 30px;
+            background: var(--light-gray-color);
+        }
+    }
+}

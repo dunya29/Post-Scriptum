@@ -1,0 +1,42 @@
+<!--intro-->
+@@if (img == 'services-intro') {
+<section class="section intro">
+    }
+    @@if (img != 'services-intro') {
+    <section class="intro">
+        }
+        <div class="container">
+            <div class="sec-top">
+                <h1>@@title</h1>
+            </div>
+            <div class="links-list">
+                <ul>
+                    <li><a href="#">Предпроектный анализ</a></li>
+                    <li><a href="#">Проектирование</a></li>
+                    <li><a href="#">Технический заказчик</a></li>
+                    <li><a href="#">Строительство</a></li>
+                    <li><a href="#">Строительство под ключ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="intro__img">
+            <picture>
+                <source srcset="img/content/@@img.webp" type="image/webp" media="(min-width: 1460.98px)">
+                <source srcset="img/content/@@img.jpg" media="(min-width: 1460.98px)">
+                <source srcset="img/content/@@img-1280.webp" type="image/webp" media="(min-width: 600.98px)">
+                <source srcset="img/content/@@img-1280.jpg" media="(min-width: 600.98px)">
+                <source srcset="img/content/@@img-mob.webp" type="image/webp">
+                <source srcset="img/content/@@img-mob.jpg">
+                <img src="img/content/@@img.jpg" alt >
+            </picture>
+        </div>
+        @@if (img == 'services-intro') {
+        <div class="intro__content">
+            <div class="container">
+                <p>Компания Post Scriptum предлагает комплексные решения в&nbsp;области проектирования, строительства и&nbsp;девелопмента жилых
+                    и&nbsp;коммерческих объектов.
+                    Обеспечиваем профессиональный подход на&nbsp;всех этапах реализации: от&nbsp;анализа участка до&nbsp;ввода объекта в&nbsp;эксплуатацию</p>
+            </div>
+        </div>
+        }
+    </section>

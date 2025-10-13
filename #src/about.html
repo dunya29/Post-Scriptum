@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    @@include('_head.html', {
+    "title": "О компании"
+    })
+
+    <body>
+        <div class="wrap">
+            @@include('_header.html', {"main": false})
+            <!--main-->
+            <main class="main">
+                @@include("_intro.html", {
+                "title": "Ваш надёжный партнёр в&nbsp;девелопменте",
+                "img": "about-intro"
+                })
+                @@include("_about-block.html")
+                <!--team-->
+                <section class="section team" data-animation="fadeUp">
+                    <div class="container">
+                        <div class="sec-top">
+                            <h2>Команда</h2>
+                        </div>
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    @@include("_item-team.html", {"name": "Сергей Попов", "pos": "Генеральный директор", "nmb": "1"})
+                                </div>
+                                <div class="swiper-slide">
+                                    @@include("_item-team.html", {"name": "Арсений Чакрыгин ", "pos": "Главный архитектор", "nmb": "2"})
+                                </div>
+                                <div class="swiper-slide">
+                                    @@include("_item-team.html", {"name": "Кирилл Макарищев", "pos": "Технический директор", "nmb": "3"})
+                                </div>
+                                <div class="swiper-slide">
+                                    @@include("_item-team.html", {"name": "Душутин Алексей", "pos": "Директор по продукту", "nmb": "4"})
+                                </div>
+                                <div class="swiper-slide">
+                                    @@include("_item-team.html", {"name": "Анна Румянцева", "pos": "Руководитель проектов", "nmb": "5"})
+                                </div>
+                                <div class="swiper-slide">
+                                    @@include("_item-team.html", {"name": "Тимофеев Дмитрий", "pos": "Главный инженер проектов", "nmb": "6"})
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                @@include("_clients.html")
+                @@include("_news-swiper.html",{"title": false})
+                @@include("_main-form.html")
+                @@include("_contacts.html")
+            </main>
+            @@include('_footer.html', {"main": false})
+            @@include('_modal.html')
+        </div>
+        @@include('_js.html')
+    </body>
+
+</html>

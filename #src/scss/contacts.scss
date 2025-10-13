@@ -1,0 +1,198 @@
+.contacts {
+    &__row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        .item-contact:last-child {
+            grid-area: 1/2/3/3;
+        }
+    }
+    @media (max-width: $bp3) {
+        &__row {
+            gap: 10px;
+        }
+    }
+    @media (max-width: $bp4) {
+        margin-bottom: 30px;
+        .white-bg {
+            padding: 0;
+            border-radius: 0;
+            background: none;
+        }
+        .sec-top {
+            margin-bottom: 10px;
+        }
+        &__row {
+            grid-template-columns: 1fr;
+            gap: 10px;
+            .item-contact {
+                &:last-child {
+                    grid-area: auto;
+                    margin-top: 10px;
+                }
+                br,
+                &__lbl {
+                    display: none;
+                }
+                &__address.h3 {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: var(--dark-gray-color);
+                    margin-bottom: 10px;
+                }
+                &__info {
+                    p,
+                    a {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+.item-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 30px;
+    & > *:last-child {
+        margin-bottom: 0 !important;
+    }
+    p {
+        margin-bottom: 10px;
+    }
+    p,
+    a,
+    &__lbl {
+        color: var(--dark-gray-color);
+    }
+    .h3 {
+        font-size: 36px;
+        color: var(--black-color);
+        margin-bottom: 26px;
+    }
+    &__lbl {
+        margin-bottom: 18px;
+    }
+    &__info p {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    @media (max-width: $bp2) {
+        .h3 {
+            font-size: 30px;
+        }
+    }
+    @media (min-width: $bp4) and (max-width: $bp3) {
+        .h3 {
+            font-size: 24px;
+        }
+    }
+    @media (max-width: $bp7) {
+        .h3 {
+            font-size: 28px;
+        }
+    }
+}
+.contacts-p {
+    &__wrapper {
+        padding: 72px 0 122px;
+        position: relative;
+    }
+    &__main {
+        width: 100%;
+        max-width: 557px;
+        padding: 20px;
+        position: relative;
+        z-index: 1;
+        .item-contact {
+            margin-bottom: 10px;
+        }
+        .second-btn {
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
+    &__map {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    @media (max-width: 1600.98px) {
+        &__wrapper {
+            padding: 72px 0;
+        }
+        &__main {
+            max-width: 479px;
+            .item-contact .h3 {
+                font-size: 30px;
+            }
+        }
+    }
+    @media (max-width: $bp2) {
+        &__wrapper {
+            padding: 40px 0;
+        }
+        &__main {
+            max-width: 350px;
+        }
+    }
+    @media (min-width: $bp4) and (max-width: $bp2) {
+        &__main {
+            .item-contact {
+                .h3 {
+                    font-size: 20px;
+                    margin-bottom: 18px;
+                }
+                &__lbl {
+                    font-size: 18px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+    @media (max-width: $bp4) {
+        &__wrapper {
+            padding: 0;
+        }
+        &__main {
+            max-width: 100%;
+            padding: 0;
+            background: none;
+            margin-bottom: 30px;
+            .white-bg {
+                background: var(--light-gray-color);
+            }
+            .item-contact {
+                &__lbl,
+                &__info {
+                    font-size: 24px;
+                }
+            }
+        }
+        &__map {
+            position: relative;
+            height: 344px;
+        }
+    }
+    @media (max-width: $bp7) {
+        &__main {
+            .item-contact {
+                .h3 {
+                    font-size: 28px;
+                }
+                &__lbl,
+                &__info {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+.intro {
+    h1,
+    .h1 {
+        max-width: 1600.98px;
+    }
+    &__img {
+        width: 100%;
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    &__content {
+        margin-top: 100px;
+        p {
+            font-size: 58px;
+            font-weight: 500;
+            @media (max-width: $bp1) {
+                font-size: 36px;
+            }
+            @media (max-width: $bp2) {
+                font-size: 20px;
+            }
+            @media (max-width: $bp3) {
+                font-size: 18px;
+                font-weight: 400;
+            }
+        }
+    }
+    @media (max-width: $bp2) {
+        &__content {
+            margin-top: 60px;
+        }
+    }
+    @media (max-width: $bp3) {
+        display: flex;
+        flex-direction: column;
+        .links-list {
+            display: none;
+        }
+        &__img {
+            order: 1;
+        }
+        &__content {
+            margin: 0 0 30px;
+        }
+    }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    @@include('_head.html', {
+    "title": "Бизнес-центр на Комсомольской"
+    })
+
+    <body>
+        <div class="wrap">
+            @@include('_header.html', {"main": false})
+            <!--main-->
+            <main class="main">
+                @@include("_breadcrumbs-2.html", {"page1": "Портфолио","page2": "Бизнес-центр на Комсомольской"})
+                <!--project-p-->
+                <section class="mb-50 project-p" data-animation="fadeUp">
+                    <div class="container">
+                        <div class="sec-top">
+                            <h1>Бизнес-центр на Комсомольской</h1>
+                        </div>
+                    </div>
+                    <div class="mb-50 project-p__swiper">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide lazy-img">
+                                    <img src="img/content/project-1-1.jpg" alt loading="lazy">
+                                </div>
+                                <div class="swiper-slide lazy-img">
+                                    <img src="img/content/project-1-2.jpg" alt loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav-btns">
+                            <button class="nav-btn nav-btn--prev"><svg><use xlink:href="img/svg/sprite.svg#btn-prev"></use></svg></button>
+                            <button class="nav-btn nav-btn--next"><svg><use xlink:href="img/svg/sprite.svg#btn-next"></use></svg></button>
+                        </div>
+                    </div>
+                </section>
+                <section class="section gray-sec" data-animation="fadeUp">
+                    <div class="container">
+                        <div class="sec-top">
+                            <h2>Основные характеристики объекта</h2>
+                        </div>
+                        <div class="page-content">
+                            <ul>
+                                <li>Общая площадь: 7 800 м²</li>
+                                <li>Количество этажей: 8</li>
+                                <li>Паркинг: наземный машино-мест 30</li>
+                                <li>Территория благоустройства: 3 500 м²</li>
+                            </ul>
+                            <h3>Выполненные работы в рамках генерального проектирования:</h3>
+                            <ul>
+                                <li>Разработка объёмно-планировочного решения</li>
+                                <li>Разработка и согласование АГО</li>
+                                <li>Разработка проектной документации</li>
+                                <li>Прохождение негосударственной экспертизы</li>
+                                <li>Разработка рабочей документации</li>
+                                <li>Авторский надзор</li>
+                            </ul>
+                            <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Технические данные</th>
+                                            <th>Технические данные</th>
+                                            <th>Технические данные</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Технические данные</td>
+                                            <td>Технические данные</td>
+                                            <td>Технические данные</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Технические данные</td>
+                                            <td>Технические данные</td>
+                                            <td>Технические данные</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                        </div>
+                    </div>
+                </section>
+                @@include("_services-form.html", {"img": "content/project-1-form"})
+                @@include("_contacts.html")
+            </main>
+            @@include('_footer.html', {"main": false})
+            @@include('_modal.html')
+        </div>
+        @@include('_js.html')
+    </body>
+
+</html>

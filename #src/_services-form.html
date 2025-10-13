@@ -1,0 +1,83 @@
+<!--services-form-->
+<section class="section main-form main-form--service" data-animation="fadeUp">
+    <div class="container">
+        <div class="main-form__inner">
+            <form class="form" onsubmit="event.preventDefault();formReset(this);openSuccessMod(false,'Наш специалист свяжется с&nbsp;вами в&nbsp;время.')">
+                <div class="sec-top">
+                    <h2>Рассчитать стоимость</h2>
+                    <p class="sm-desktop-hidden">Мы свяжемся с вами в течение двух часов, чтобы уточнить&nbsp;детали</p>
+                </div>
+                <div class="main-form__img">
+                    <picture>
+                        <source srcset="img/@@img.webp" type="image/webp" media="(min-width: 1460.98px)">
+                        <source srcset="img/@@img.jpg" media="(min-width: 1460.98px)">
+                        <source srcset="img/@@img-1280.webp" type="image/webp">
+                        <source srcset="img/@@img-1280.jpg">
+                        <img src="img/@@img.jpg" alt>
+                    </picture>
+                </div>
+                <div class="form__fieldsets">
+                    <fieldset class="form__fieldset">
+                        <legend class="form__legend">Контактные данные</legend>
+                        <div class="form__grid">
+                            <div class="item-form">
+                                <input type="text" placeholder="Имя" aria-required="true">
+                                <span data-error></span>
+                            </div>
+                            <div class="item-form">
+                                <input type="tel" placeholder="+7 999 999-99-99" aria-required="true">
+                                <span data-error></span>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form__fieldset">
+                        <legend class="form__legend">Кратко расскажите о вашем проекте</legend>
+                        <div class="item-form">
+                            <textarea placeholder="Какой объект вы планируете построить?"
+                                oninput="this.style.height = '';this.style.height = this.scrollHeight + 'px'"></textarea>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form__fieldset">
+                        <legend class="form__legend">Площадь объекта</legend>
+                        <div class="form__radios">
+                            <label role="radio" aria-checked="true" tabindex="0">
+                                <input type="radio" name="square" value="1" checked>
+                                <span>менее 2000 м2</span>
+                            </label>
+                            <label role="radio" aria-checked="false" tabindex="0">
+                                <input type="radio" name="square" value="1">
+                                <span>2000–5000 м2</span>
+                            </label>
+                            <label role="radio" aria-checked="false" tabindex="0">
+                                <input type="radio" name="square" value="1">
+                                <span>более 5000 м2</span>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form__fieldset">
+                        <legend class="form__legend">Местоположение объекта</legend>
+                        <div class="item-form">
+                            <input type="text" placeholder="Московская область" aria-required="true">
+                            <span data-error></span>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="form__footer">
+                    <div class="file-form">
+                        <label>
+                            <input type="file" accept=".png, .jpg, .jpeg, .pdf" data-max-size>
+                            <span>Прикрепить файл</span>
+                        </label>
+                        <div class="file-form__items"></div>
+                        <span data-error></span>
+                    </div>
+                    <button type="submit" class="btn main-btn"><span>Отправить заявку</span></button>
+                    <label class="item-checkbox">
+                        <input type="checkbox">
+                        <span>Даю согласие на обработку моих данных в&nbsp;соответствии с <a href="#" target="_blank" class="border-link">политикой</a></span>
+                    </label>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

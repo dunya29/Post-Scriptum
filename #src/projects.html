@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    @@include('_head.html', {
+    "title": "Реализованные проекты"
+    })
+
+    <body>
+        <div class="wrap">
+            @@include('_header.html', {"main": false})
+            <!--main-->
+            <main class="main">
+                <!--projects-->
+                <section class="section projects">
+                    <div class="container">
+                        <div class="sec-top">
+                            <h1>Реализованные проекты</h1>
+                        </div>
+                        <form class="form projects__filter">
+                            <div class="dropdown radio-select" role="radiogroup">
+                                <div class="dropdown__header" tabindex="0" role="button" aria-haspopup="listbox" aria-expanded="false">
+                                    <span>Жилые комплексы</span>
+                                    <svg><use xlink:href="img/svg/sprite.svg#chevron-bot"></use></svg>
+                                </div>
+                                <div class="dropdown__body">
+                                    <div class="custom-scroll" role="listbox">
+                                        <label role="radio" aria-checked="true" tabindex="0">
+                                            <input type="radio" name="type" value="1" data-id="filter[1]" checked>
+                                            <span>Жилые комплексы</span>
+                                        </label>
+                                        <label role="radio" aria-checked="false" tabindex="0">
+                                            <input type="radio" name="type" value="2" data-id="filter[2]">
+                                            <span>Бизнес-центры</span>
+                                        </label>
+                                        <label role="radio" aria-checked="false" tabindex="0">
+                                            <input type="radio" name="type" value="3" data-id="filter[3]">
+                                            <span>Медицинские центры</span>
+                                        </label>
+                                        <label role="radio" aria-checked="false" tabindex="0">
+                                            <input type="radio" name="type" value="4" data-id="filter[4]">
+                                            <span>Торговые центры</span>
+                                        </label>
+                                        <label role="radio" aria-checked="false" tabindex="0">
+                                            <input type="radio" name="type" value="5" data-id="filter[5]">
+                                            <span>Рестораны</span>
+                                        </label>
+                                        <label role="radio" aria-checked="false" tabindex="0">
+                                            <input type="radio" name="type" value="6" data-id="filter[6]">
+                                            <span>Производственные здания</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown radio-select" role="radiogroup">
+                                <div class="dropdown__header" tabindex="0" role="button" aria-haspopup="listbox" aria-expanded="false">
+                                    <span>Предпроектный анализ</span>
+                                    <svg><use xlink:href="img/svg/sprite.svg#chevron-bot"></use></svg>
+                                </div>
+                                <div class="dropdown__body">
+                                    <div class="custom-scroll" role="listbox">
+                                        <label role="radio" aria-checked="true" tabindex="0">
+                                            <input type="radio" name="service" value="1" data-id="filter[7]" checked>
+                                            <span>Предпроектный анализ</span>
+                                        </label>
+                                        <label role="radio" aria-checked="false" tabindex="0">
+                                            <input type="radio" name="service" value="2" data-id="filter[8]">
+                                            <span>Проектирование</span>
+                                        </label>
+                                        <label role="radio" aria-checked="false" tabindex="0">
+                                            <input type="radio" name="service" value="3" data-id="filter[9]">
+                                            <span>Технический заказчик</span>
+                                        </label>
+                                        <label role="radio" aria-checked="false" tabindex="0">
+                                            <input type="radio" name="service" value="4" data-id="filter[10]">
+                                            <span>Строительство</span>
+                                        </label>
+                                        <label role="radio" aria-checked="false" tabindex="0">
+                                            <input type="radio" name="service" value="5" data-id="filter[11]">
+                                            <span>Строительство под ключ</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="projects__row">
+                            @@include("_item-project.html", {"main": false, "nmb": 1, "title": "Жилой комплекс «Швейцария парк»"})
+                            @@include("_item-project.html", {"main": false, "nmb": 2, "title": "Многоквартирный жилой дом"})
+                            @@include("_item-project.html", {"main": false, "nmb": 3, "title": "Многоквартирный жилой дом"})
+                            @@include("_item-project.html", {"main": false, "nmb": 4, "title": "Многоквартирный жилой дом"})
+                            @@include("_item-project.html", {"main": false, "nmb": 5, "title": "Жилой комплекс на Коперника"})
+                            @@include("_item-project.html", {"main": false, "nmb": 6, "title": "ДСЮШ «ТОРПЕДО»"})
+                            @@include("_item-project.html", {"main": false, "nmb": 7, "title": "Многоквартирный жилой дом"})
+                            @@include("_item-project.html", {"main": false, "nmb": 8, "title": "Бизнес-центр на Комсомольской"})
+                            @@include("_item-project.html", {"main": false, "nmb": 9, "title": "Жилой комплекс «Олимпийский»"})
+                            @@include("_item-project.html", {"main": false, "nmb": 10, "title": "Застройка на косе затона"})
+                            @@include("_item-project.html", {"main": false, "nmb": 11, "title": "МФК «ТОРПЕДО»"})
+                            @@include("_item-project.html", {"main": false, "nmb": 12, "title": "Оздоровительный центр с&nbsp;аквапарком"})
+                            @@include("_item-project.html", {"main": false, "nmb": 13, "title": "Wake Park на Мещерском озере"})
+                            @@include("_item-project.html", {"main": false, "nmb": 14, "title": "Административное здание"})
+                            @@include("_item-project.html", {"main": false, "nmb": 15, "title": "Гостиничный комплекс"})
+                            @@include("_item-project.html", {"main": false, "nmb": 16, "title": "Школа"})
+                            @@include("_item-project.html", {"main": false, "nmb": 17, "title": "Торговый центр «АНКУДИНОВКА»"})
+                            @@include("_item-project.html", {"main": false, "nmb": 18, "title": "Ресторан на набережной"})
+                            @@include("_item-project.html", {"main": false, "nmb": 19, "title": "Лечебный корпус ГКБ №&nbsp;12"})
+                            @@include("_item-project.html", {"main": false, "nmb": 20, "title": "Клиника пластической хирургии"})
+                            @@include("_item-project.html", {"main": false, "nmb": 21, "title": "Логистический центр"})
+                            @@include("_item-project.html", {"main": false, "nmb": 22, "title": "Складской комплекс"})
+                            @@include("_item-project.html", {"main": false, "nmb": 23, "title": "Производственное здание"})
+                        </div>
+                    </div>
+                </section>
+                @@include("_main-form.html")
+                @@include("_contacts.html")
+            </main>
+            @@include('_footer.html', {"main": false})
+            @@include('_modal.html')
+        </div>
+        @@include('_js.html')
+    </body>
+
+</html>

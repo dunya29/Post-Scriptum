@@ -1,0 +1,21 @@
+<!--item-project-->
+<article class="item-project">
+    <a href="#" class="item-project__wrapper">
+        <div class="media-cover lazy-img">
+            @@if (nmb === 6 && main === true) {
+            <picture>
+                <source srcset="img/content/project-@@nmb-main.webp" type="image/webp" media="(min-width: 767.98px)">
+                <source srcset="img/content/project-@@nmb-main.jpg" media="(min-width: 767.98px)">
+                <source srcset="img/content/project-@@nmb-main-mob.webp" type="image/webp">
+                <source srcset="img/content/project-@@nmb-main-mob.jpg">
+                <img src="img/content/project-@@nmb-main.jpg" alt loading="lazy">
+            </picture>
+            }
+            @@if (main === false) {
+            <img src="img/content/project-@@nmb.jpg" alt loading="lazy">
+            }
+        </div>
+        <div class="link-btn"><svg><use xlink:href="img/svg/sprite.svg#ext-link"></use></svg></div>
+        <h5 class="item-project__title">@@title</h5>
+    </a>
+</article>

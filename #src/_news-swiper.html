@@ -1,0 +1,45 @@
+<!--news-->
+
+@@if(title) {
+<section class="gray-sec swiper-4 news" data-animation="fadeUp">
+    }
+    @@if(!title) {
+    <section class="section swiper-4 news" data-animation="fadeUp">
+        }
+        <div class="container">
+            <div class="sec-top">
+                @@if(title) {
+                <h2>@@title</h2>
+                }
+                @@if(!title) {
+                <h2 class="mob-hidden">События нашей компании</h2>
+                <p class="h2 desktop-hidden">Новости</p>
+                }
+            </div>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        @@include("_item-news.html")
+                    </div>
+                    <div class="swiper-slide">
+                        @@include("_item-news.html")
+                    </div>
+                    <div class="swiper-slide">
+                        @@include("_item-news.html")
+                    </div>
+                    <div class="swiper-slide">
+                        @@include("_item-news.html")
+                    </div>
+                    <div class="swiper-slide">
+                        @@include("_item-news.html")
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            @@if(!title) {
+            <div class="sec-bottom">
+                <a href="#" class="btn main-btn"><span>Все новости</span></a>
+            </div>
+            }
+        </div>
+    </section>

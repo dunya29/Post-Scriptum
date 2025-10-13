@@ -1,0 +1,30 @@
+.search-form {
+    width: 100%;
+    max-width: 400px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 40px;
+    &__icon {
+        fill: var(--gray-color);
+        width: 24px;
+        height: 24px;
+    }
+    &__inp {
+        flex: 1 1 auto;
+    }
+    &__reset {
+        visibility: hidden;
+        opacity: 0;
+        &.show {
+            visibility: visible;
+            opacity: 1;
+        }
+        svg {
+            stroke: var(--text-color);
+            width: 20px;
+            height: 20px;
+        }
+    }
+}

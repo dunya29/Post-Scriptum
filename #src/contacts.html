@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    @@include('_head.html', {
+    "title": "Контакты"
+    })
+
+    <body>
+        <div class="wrap">
+            @@include('_header.html', {"main": false})
+            <!--main-->
+            <main class="main">
+                @@include("_breadcrumbs.html", {"page": "Контакты"})
+                <!--contacts-p-->
+                <section class="section contacts-p" data-animation="fadeUp">
+                    <div class="container">
+                        <div class="sec-top">
+                            <h1>Контакты</h1>
+                        </div>
+                    </div>
+                    <div class="contacts-p__wrapper">
+                        <div class="container">
+                            <div class="gray-bg contacts-p__main">
+                                <div class="white-bg item-contact">
+                                    <div class="item-contact__lbl">Телефон:</div>
+                                    <a href="tel:+78005506768" class="h3">8 800 550-67-68</a>
+                                </div>
+                                <div class="white-bg item-contact">
+                                    <div class="item-contact__lbl">Почта:</div>
+                                    <a href="mailto:office@pscr.pro" class="h3">office@pscr.pro</a>
+                                </div>
+                                <div class="white-bg item-contact">
+                                    <div class="item-contact__lbl">Адрес:</div>
+                                    <address class="h3 item-contact__address">
+                                        Москва,<br>
+                                        Малая Грузинская улица, 28
+                                    </address>
+                                    <div class="item-contact__info">
+                                        <p>Пн-Пт с 9:00 до 18:00</p>
+                                    </div>
+                                </div>
+                                <button class="btn second-btn mod-open-btn" data-modal="feedback-mod"><span>Записаться на встречу</span></button>
+                            </div>
+                        </div>
+                        <div class="contacts-p__map">
+                           <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A364640c04d2148c8cf39248f9f1335c107f72d8a642b05fdba02831aae97fa39&amp;source=constructor" width="100%" height="544" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('_footer.html', {"main": false})
+            @@include('_modal.html')
+        </div>
+        @@include('_js.html')
+    </body>
+
+</html>

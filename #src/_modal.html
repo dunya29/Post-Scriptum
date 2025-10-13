@@ -1,0 +1,69 @@
+<!--feedback-mod-->
+<modal class="custom-scroll modal feedback-mod" id="feedback-mod">
+    <div class="modal__content">
+        <button type="button" class="btn btn-cross modal__close"></button>
+        <div class="modal__top">
+            <h2 class="sm-desktop-hidden">Оставьте заявку, и&nbsp;мы проконсультируем вас&nbsp;по&nbsp;всем вопросам</h2>
+            <p class="h2 l-desktop-hidden" aria-hidden="true">Оставьте заявку, и&nbsp;мы&nbsp;ответим на&nbsp;ваши вопросы</p>
+        </div>
+        <form class="form" onsubmit="event.preventDefault();formReset(this);openSuccessMod(false,'Наш специалист свяжется с&nbsp;вами в&nbsp;время.')">
+            <div class="form__fieldsets">
+                <fieldset class="form__fieldset">
+                    <legend class="form__legend">Контактные данные</legend>
+                    <div class="form__grid">
+                        <div class="item-form">
+                            <input type="text" placeholder="Имя" aria-required="true">
+                            <span data-error></span>
+                        </div>
+                        <div class="item-form">
+                            <input type="tel" placeholder="+7 999 999-99-99" aria-required="true">
+                            <span data-error></span>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="form__fieldset">
+                    <legend class="form__legend">Кратко расскажите о вашем проекте</legend>
+                    <div class="item-form">
+                        <textarea placeholder="Какой объект вы планируете построить?"
+                            oninput="this.style.height = '';this.style.height = this.scrollHeight + 'px'"></textarea>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="form__footer">
+                <button type="submit" class="btn second-btn"><span>Заказать звонок</span></button>
+                <label class="item-checkbox">
+                    <input type="checkbox">
+                    <span>Даю согласие на обработку моих данных в&nbsp;соответствии с <a href="#" target="_blank" class="border-link">политикой</a></span>
+                </label>
+            </div>
+        </form>
+    </div>
+</modal>
+<!--success-mod-->
+<modal class="custom-scroll modal success-mod" id="success-mod">
+    <div class="modal__content">
+        <button type="button" class="btn btn-cross modal__close"></button>
+        <div class="modal__top">
+            <h2 class="h2"></h2>
+            <p class="modal__top-txt"></p>
+        </div>
+        <div class="links-list">
+            <ul>
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">Проекты</a></li>
+                <li><a href="#">Главная</a></li>
+            </ul>
+        </div>
+    </div>
+</modal>
+<!--error-mod-->
+<modal class="custom-scroll modal error-mod" id="error-mod">
+    <div class="modal__content">
+        <button type="button" class="btn btn-cross modal__close"></button>
+        <div class="modal__top">
+            <h2 class="h2"></h2>
+            <p class="modal__top-txt"></p>
+        </div>
+        <button type="button" class="btn second-btn modal__close"><span>Закрыть</span></button>
+    </div>
+</modal>

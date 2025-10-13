@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    @@include('_head.html', {
+    "title": "Главная"
+    })
+
+    <body>
+        <div class="wrap">
+            @@include('_header.html', {"main": true})
+            <!--main-->
+            <main class="main">
+                @@include("_intro.html", {
+                "title": "Проектирование и&nbsp;строительство объектов недвижимости по&nbsp;всей&nbsp;России",
+                "img": "main-intro"
+                })
+                @@include("_about-block.html")
+                @@include("_services-block.html")
+                <!--projects-->
+                <section class="section projects projects--main" data-animation="fadeUp">
+                    <div class="container">
+                        <div class="sec-top">
+                            <h2>Ключевые проекты компании</h2>
+                        </div>
+                        <form class="form projects__filter">
+                            <div class="dropdown radio-select" role="radiogroup">
+                                <div class="dropdown__header" tabindex="0" role="button" aria-haspopup="listbox" aria-expanded="false">
+                                    <span>Жилые комплексы</span>
+                                    <svg><use xlink:href="img/svg/sprite.svg#chevron-bot"></use></svg>
+                                </div>
+                                <div class="dropdown__body">
+                                    <div class="custom-scroll" role="listbox">
+                                        <label role="radio" aria-checked="true" tabindex="0">
+                                            <input type="radio" name="type" value="1" data-id="filter[1]" checked>
+                                            <span>Жилые комплексы</span>
+                                        </label>
+                                        <label role="radio" aria-checked="false" tabindex="0">
+                                            <input type="radio" name="type" value="2" data-id="filter[2]">
+                                            <span>Бизнес-центры</span>
+                                        </label>
+                                        <label role="radio" aria-checked="false" tabindex="0">
+                                            <input type="radio" name="type" value="3" data-id="filter[3]">
+                                            <span>Медицинские центры</span>
+                                        </label>
+                                        <label role="radio" aria-checked="false" tabindex="0">
+                                            <input type="radio" name="type" value="4" data-id="filter[4]">
+                                            <span>Торговые центры</span>
+                                        </label>
+                                        <label role="radio" aria-checked="false" tabindex="0">
+                                            <input type="radio" name="type" value="5" data-id="filter[5]">
+                                            <span>Рестораны</span>
+                                        </label>
+                                        <label role="radio" aria-checked="false" tabindex="0">
+                                            <input type="radio" name="type" value="6" data-id="filter[6]">
+                                            <span>Производственные здания</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown radio-select" role="radiogroup">
+                                <div class="dropdown__header" tabindex="0" role="button" aria-haspopup="listbox" aria-expanded="false">
+                                    <span>Предпроектный анализ</span>
+                                    <svg><use xlink:href="img/svg/sprite.svg#chevron-bot"></use></svg>
+                                </div>
+                                <div class="dropdown__body">
+                                    <div class="custom-scroll" role="listbox">
+                                        <label role="radio" aria-checked="true" tabindex="0">
+                                            <input type="radio" name="service" value="1" data-id="filter[7]" checked>
+                                            <span>Предпроектный анализ</span>
+                                        </label>
+                                        <label role="radio" aria-checked="false" tabindex="0">
+                                            <input type="radio" name="service" value="2" data-id="filter[8]">
+                                            <span>Проектирование</span>
+                                        </label>
+                                        <label role="radio" aria-checked="false" tabindex="0">
+                                            <input type="radio" name="service" value="3" data-id="filter[9]">
+                                            <span>Технический заказчик</span>
+                                        </label>
+                                        <label role="radio" aria-checked="false" tabindex="0">
+                                            <input type="radio" name="service" value="4" data-id="filter[10]">
+                                            <span>Строительство</span>
+                                        </label>
+                                        <label role="radio" aria-checked="false" tabindex="0">
+                                            <input type="radio" name="service" value="5" data-id="filter[11]">
+                                            <span>Строительство под ключ</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="projects__row">
+                            @@include("_item-project.html", {"main": false, "nmb": 1, "title": "Жилой комплекс «Швейцария парк»"})
+                            @@include("_item-project.html", {"main": false, "nmb": 2, "title": "Многоквартирный жилой дом"})
+                            @@include("_item-project.html", {"main": false, "nmb": 3, "title": "Многоквартирный жилой дом"})
+                            @@include("_item-project.html", {"main": false, "nmb": 4, "title": "Многоквартирный жилой дом"})
+                            @@include("_item-project.html", {"main": false, "nmb": 5, "title": "Жилой комплекс на Коперника"})
+                            @@include("_item-project.html", {"main": false, "nmb": 6, "title": "ДСЮШ «ТОРПЕДО»"})
+                            @@include("_item-project.html", {"main": false, "nmb": 7, "title": "Многоквартирный жилой дом"})
+                            @@include("_item-project.html", {"main": false, "nmb": 8, "title": "Бизнес-центр на Комсомольской"})
+                        </div>
+                        <div class="sec-bottom">
+                            <a href="#" class="btn main-btn"><span>Все проекты</span></a>
+                        </div>
+                    </div>
+                </section>
+                <!--why-us-->
+                <section class="section why-us" data-animation="fadeUp">
+                    <div class="container">
+                        <div class="sec-top">
+                            <h2>Почему нам доверяют лидеры рынка?</h2>
+                        </div>
+                        <div class="why-us__row">
+                            <!--item-why-->
+                            <div class="gray-bg item-why">
+                                <div class="item-why__icon"><img src="img/svg/icons/complex.svg" alt></div>
+                                <h3>Комплексный подход&nbsp;— от&nbsp;идеи до&nbsp;реализации под&nbsp;ключ</h3>
+                            </div>
+                            <!--item-why-->
+                            <div class="gray-bg item-why">
+                                <div class="item-why__icon"><img src="img/svg/icons/clock.svg" alt></div>
+                                <h3>Соблюдение сроков на&nbsp;каждом&nbsp;этапе проекта</h3>
+                            </div>
+                            <!--item-why-->
+                            <div class="gray-bg item-why">
+                                <div class="item-why__icon"><img src="img/svg/icons/experience.svg" alt></div>
+                                <h3>Опытные и&nbsp;сертифицированные специалисты</h3>
+                            </div>
+                            <!--item-why-->
+                            <div class="gray-bg item-why">
+                                <div class="item-why__icon"><img src="img/svg/icons/individ.svg" alt></div>
+                                <h3>Индивидуальные решения&nbsp;— под&nbsp;задачи вашего проекта</h3>
+                            </div>
+                            <!--item-why-->
+                            <div class="gray-bg item-why">
+                                <div class="item-why__icon"><img src="img/svg/icons/optimize.svg" alt></div>
+                                <h3>Оптимизация затрат&nbsp;— разработка решений для&nbsp;экономии бюджета</h3>
+                            </div>
+                            <!--item-why-->
+                            <div class="gray-bg item-why">
+                                <div class="item-why__icon"><img src="img/svg/icons/transparency.svg" alt></div>
+                                <h3>Прозрачность работы&nbsp;— открытая отчётность и&nbsp;постоянная связь</h3>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                @@include("_main-form.html")
+                @@include("_clients.html")
+                @@include("_news-swiper.html", {"title": false})
+                <!--faq-->
+                <section class="section faq" data-animation="fadeUp">
+                    <div class="container">
+                        <div class="faq__inner">
+                            <div class="sec-top">
+                                <h2>Часто задаваемые вопросы</h2>
+                            </div>
+                            @@include("_item-faq.html", { "title": "Что значит «комплексное проектирование»?" })
+                            @@include("_item-faq.html", { "title": "Какие этапы работ включает комплексное проектирование?" })
+                            @@include("_item-faq.html", { "title": "Сколько стоит разработка проекта?" })
+                            @@include("_item-faq.html", { "title": "Даёте ли вы какие‑либо гарантии на&nbsp;свои услуги?" })
+                            @@include("_item-faq.html", { "title": "Как вы обеспечиваете соблюдение сроков?" })
+                        </div>
+                    </div>
+                </section>
+                @@include("_main-form.html")
+                @@include("_contacts.html")
+            </main>
+            @@include('_footer.html', {"main": true})
+            @@include('_modal.html')
+        </div>
+        @@include('_js.html')
+        <script>
+            openErrorMod()
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    @@include('_head.html', {
+    "title": "Новости компании"
+    })
+
+    <body>
+        <div class="wrap">
+            @@include('_header.html', {"main": false})
+            <!--main-->
+            <main class="main">
+                @@include("_breadcrumbs.html", {"page": "Новости компании"})
+                <!--news-->
+                <section class="section news" data-animation="fadeUp">
+                    <div class="container">
+                        <div class="sec-top">
+                            <h1>Новости компании</h1>
+                        </div>
+                        <div class="news__row">
+                            @@include("_item-news.html")
+                            @@include("_item-news.html")
+                            @@include("_item-news.html")
+                            @@include("_item-news.html")
+                            @@include("_item-news.html")
+                            @@include("_item-news.html")
+                            @@include("_item-news.html")
+                            @@include("_item-news.html")
+                            @@include("_item-news.html")
+                            @@include("_item-news.html")
+                            @@include("_item-news.html")
+                            @@include("_item-news.html")
+                        </div>
+                        @@include("_pagination.html")
+                    </div>
+                </section>
+                @@include("_contacts.html")
+            </main>
+            @@include('_footer.html', {"main": false})
+            @@include('_modal.html')
+        </div>
+        @@include('_js.html')
+    </body>
+
+</html>
