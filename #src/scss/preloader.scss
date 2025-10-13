@@ -17,11 +17,11 @@
         visibility: hidden;
         opacity: 0;
     }
-    .preloader__logo {
+    &__logo {
         svg {
             fill: var(--primary-color);
-            width: 250px;
-            height: 26px;
+            width: calc((1vw + 1vh) * 13);
+            height: auto;
             overflow: visible;
         }
         &-circles path {
@@ -36,20 +36,16 @@
             opacity: 0;
         }
     }
+    @media (max-width: $bp4) {
+        &__logo {
+            svg {
+                width: 250px;
+                height: 26px;
+            }
+        }
+    }
 }
 @keyframes circlesAppear {
-    /*     0% {
-        transform: scale(0);
-        opacity: 0;
-    }
-    50% {
-        transform: scale(1.1);
-        opacity: 1;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    } */
     0% {
         opacity: 0;
         transform: translateX(-50px);

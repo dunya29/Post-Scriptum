@@ -1,7 +1,26 @@
 .notfound-p {
+    min-height: 100%;
     padding-bottom: 80px;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .container {
+        position: relative;
+        &:before {
+            content: "";
+            width: 108%;
+            max-width: 2000px;
+            height: 500px;
+            background: url(../img/svg/404-bg.svg) top right / auto 100% no-repeat;
+            position: absolute;
+            left: 53%;
+            transform: translateX(-50%);
+            pointer-events: none;
+            z-index: -1;
+        }
+    }
     .sec-top {
         max-width: 1430px;
         margin-bottom: 60px;
@@ -17,18 +36,6 @@
             }
         }
     }
-    &:before {
-        content: "";
-        width: 108%;
-        max-width: 2000px;
-        height: 500px;
-        background: url(../img/svg/404-bg.svg) top right / auto 100% no-repeat;
-        position: absolute;
-        left: 53%;
-        transform: translateX(-50%);
-        pointer-events: none;
-        z-index: -1;
-    }
     @media (min-width: $bp1) {
         .sec-top {
             h1.h2 {
@@ -38,6 +45,11 @@
     }
     @media (max-width: $bp1) {
         padding-bottom: 60px;
+        .container {
+            &:before {
+                height: 350px;
+            }
+        }
         .links-list {
             ul {
                 li {
@@ -47,17 +59,14 @@
                 }
             }
         }
-        &:before {
-            height: 350px;
-        }
     }
     @media (max-width: $bp2) {
+        .container:before {
+            content: none;
+        }
         .sec-top {
             max-width: 800px;
             margin-bottom: 30px;
-        }
-        &:before {
-            content: none;
         }
     }
     @media (min-width: $bp3) {
@@ -77,10 +86,10 @@
         padding-bottom: 30px;
     }
     @media (max-width: $bp7) {
-		.links-list {
+        .links-list {
             ul li a {
                 font-size: 28px;
             }
         }
-	}
+    }
 }

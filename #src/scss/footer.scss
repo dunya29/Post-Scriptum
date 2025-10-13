@@ -46,12 +46,15 @@
                 font-size: 18px;
                 display: inline-flex;
                 align-items: center;
-            }
-            svg {
-                fill: var(--white-color);
-                width: 16px;
-                height: 16px;
-                margin-left: 7px;
+                &[download] {
+                    &::after {
+                        content: "";
+                        width: 16px;
+                        height: 16px;
+                        background: url(../img/svg/download.svg) center / contain no-repeat;
+                        margin-left: 7px;
+                    }
+                }
             }
             &:last-child {
                 margin-bottom: 0;
@@ -148,7 +151,8 @@
     }
     @media (max-width: $bp4) {
         padding: 40px 0;
-        .page-up, &__main {
+        .page-up,
+        &__main {
             display: none;
         }
         &__row {
@@ -190,8 +194,8 @@
                 grid-column-end: span 1;
             }
         }
-    } 
-    @media (max-width:$bp7) {
+    }
+    @media (max-width: $bp7) {
         &__nav {
             li a {
                 font-size: 16px;
