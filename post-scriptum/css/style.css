@@ -538,14 +538,12 @@ blockquote:before {
   background: var(--light-gray-color);
 }
 
-.main-btn:hover {
-  background: var(--white-color);
-}
-
+.main-btn:hover,
 .main-btn:active {
-  background: var(--primary-color);
+  background: var(--black-color) !important;
 }
 
+.main-btn:hover span,
 .main-btn:active span {
   color: var(--white-color);
 }
@@ -558,20 +556,9 @@ blockquote:before {
   color: var(--white-color);
 }
 
-.second-btn:hover {
-  background: var(--white-color);
-}
-
-.second-btn:hover span {
-  color: var(--black-color);
-}
-
+.second-btn:hover,
 .second-btn:active {
-  background: var(--light-gray-color);
-}
-
-.second-btn:active span {
-  color: var(--black-color);
+  background: var(--black-color);
 }
 
 .stroke-btn {
@@ -742,7 +729,7 @@ blockquote:before {
 .link-btn:active,
 .nav-btn:hover,
 .nav-btn:active {
-  background: var(--black-color);
+  background: var(--black-color) !important;
 }
 
 .link-btn:hover svg,
@@ -762,7 +749,30 @@ blockquote:before {
   pointer-events: none;
 }
 
-.link-btn--gray {
+.gray-sec .main-btn,
+.gray-sec .link-btn,
+.gray-sec .nav-btn,
+.gray-bg .main-btn,
+.gray-bg .link-btn,
+.gray-bg .nav-btn {
+  background: var(--white-color);
+}
+
+.gray-sec .second-btn:hover,
+.gray-sec .second-btn:active,
+.gray-bg .second-btn:hover,
+.gray-bg .second-btn:active {
+  background: var(--white-color);
+}
+
+.white-bg .main-btn,
+.white-bg .link-btn,
+.white-bg .nav-btn {
+  background: var(--light-gray-color);
+}
+
+.white-bg .second-btn:hover,
+.white-bg .second-btn:active {
   background: var(--light-gray-color);
 }
 
@@ -1355,6 +1365,7 @@ blockquote:before {
 }
 
 .dropdown__header svg {
+  stroke: var(--black-color);
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: 18px;
@@ -2657,6 +2668,10 @@ blockquote:before {
   color: var(--primary-color);
 }
 
+.item-contact a.link:after {
+  background: var(--dark-gray-color);
+}
+
 .item-contact .h3 {
   font-size: 36px;
   color: var(--black-color);
@@ -2981,7 +2996,7 @@ blockquote:before {
 }
 
 .footer a:hover {
-  color: var(--primary-color);
+  color: #e4e3e3;
 }
 
 .footer--main .footer__logo {
@@ -4144,6 +4159,16 @@ blockquote:before {
 
   .feedback-mod .second-btn {
     border: 1px solid var(--white-color);
+  }
+
+  .feedback-mod .second-btn:hover,
+  .feedback-mod .second-btn:active {
+    background: var(--white-color);
+  }
+
+  .feedback-mod .second-btn:hover span,
+  .feedback-mod .second-btn:active span {
+    color: var(--black-color);
   }
 
   .feedback-mod .form__footer {

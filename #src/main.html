@@ -17,6 +17,7 @@
                 })
                 @@include("_about-block.html")
                 @@include("_services-block.html")
+                @@include("_main-form.html", {"desktopHidden": true})
                 <!--projects-->
                 <section class="section projects projects--main" data-animation="fade">
                     <div class="container">
@@ -144,7 +145,7 @@
                         </div>
                     </div>
                 </section>
-                @@include("_main-form.html")
+                @@include("_main-form.html", {"desktopHidden": false})
                 @@include("_clients.html")
                 @@include("_news-swiper.html", {"title": false})
                 <!--faq-->
@@ -162,7 +163,7 @@
                         </div>
                     </div>
                 </section>
-                @@include("_main-form.html")
+                @@include("_main-form.html", {"desktopHidden": false})
                 @@include("_contacts.html")
             </main>
             @@include('_footer.html', {"main": true})

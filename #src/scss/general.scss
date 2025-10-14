@@ -234,11 +234,9 @@ blockquote {
 }
 .main-btn {
 	background: var(--light-gray-color);
-	&:hover {
-		background: var(--white-color);
-	}
+	&:hover,
 	&:active {
-		background: var(--primary-color);
+		background: var(--black-color) !important;
 		span {
 			color: var(--white-color);
 		}
@@ -249,17 +247,9 @@ blockquote {
 	span {
 		color: var(--white-color);
 	}
-	&:hover {
-		background: var(--white-color);
-		span {
-			color: var(--black-color);
-		}
-	}
+	&:hover,
 	&:active {
-		background: var(--light-gray-color);
-		span {
-			color: var(--black-color);
-		}
+		background: var(--black-color);
 	}
 }
 .stroke-btn {
@@ -376,7 +366,7 @@ blockquote {
 	transition: all 0.3s linear;
 	&:hover,
 	&:active {
-		background: var(--black-color);
+		background: var(--black-color)!important;
 		svg {
 			fill: var(--white-color);
 		}
@@ -394,9 +384,27 @@ blockquote {
 		padding: 17px;
 	}
 }
-.link-btn {
-	&--gray {
+.gray-sec,
+.gray-bg {
+	.main-btn, .link-btn, .nav-btn {
+		background: var(--white-color);
+	}
+	.second-btn {
+		&:hover,
+		&:active {
+			background: var(--white-color);
+		}
+	}
+}
+.white-bg {
+	.main-btn, .link-btn, .nav-btn {
 		background: var(--light-gray-color);
+	}
+	.second-btn {
+		&:hover,
+		&:active {
+			background: var(--light-gray-color);
+		}
 	}
 }
 .section {
@@ -1057,6 +1065,7 @@ blockquote {
 		cursor: pointer;
 		transition: all 0.3s ease;
 		svg {
+			stroke: var(--black-color);
 			flex-shrink: 0;
 			width: 18px;
 			height: 18px;
@@ -1207,7 +1216,8 @@ blockquote {
 		}
 	}
 }
-[data-animation="fadeUp"],[data-animation="fade"] {
+[data-animation="fadeUp"],
+[data-animation="fade"] {
 	opacity: 0;
 }
 .fadeUp {

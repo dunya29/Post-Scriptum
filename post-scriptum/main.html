@@ -227,19 +227,19 @@
             <div class="white-bg about__col"  data-animation="fade">
                 <span class="text-l">1679</span>
                 <p class="h3">Выполненных проектов</p>
-                <a href="#" class="link-btn link-btn--gray"><svg><use xlink:href="img/svg/sprite.svg#ext-link"></use></svg></a>
+                <a href="#" class="link-btn"><svg><use xlink:href="img/svg/sprite.svg#ext-link"></use></svg></a>
             </div>
             <!--about-col-->
             <div class="white-bg about__col"  data-animation="fade">
                 <span class="text-l">100%</span>
                 <p class="h3">Положительных отзывов с&nbsp;1992&nbsp;года</p>
-                <a href="#" class="link-btn link-btn--gray"><svg><use xlink:href="img/svg/sprite.svg#ext-link"></use></svg></a>
+                <a href="#" class="link-btn"><svg><use xlink:href="img/svg/sprite.svg#ext-link"></use></svg></a>
             </div>
             <!--about-col-->
             <div class="white-bg about__col"  data-animation="fade">
                 <span class="text-l">21 день</span>
                 <p class="h3">Средний срок согласования документации</p>
-                <a href="#" class="btn main-btn"><span>Оставить заявку</span></a>
+                <a href="#" class="btn main-btn mod-open-btn" data-modal="feedback-mod"><span>Оставить заявку</span></a>
             </div>
         </div>
     </div>
@@ -352,6 +352,60 @@
                     </picture>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+                <!--main-form-->
+
+    <section class="section desktop-hidden main-form" data-animation="fade">
+
+
+    <div class="container">
+        <div class="main-form__inner">
+            <form class="form" onsubmit="event.preventDefault();formReset(this);openSuccessMod(false,'Наш специалист свяжется с&nbsp;вами в&nbsp;время.')">
+                <div class="sec-top">
+                    <h2 class="sm-desktop-hidden">Оставьте заявку, и&nbsp;мы&nbsp;проконсультируем вас&nbsp;по&nbsp;всем вопросам</h2>
+                    <p class="h2 l-desktop-hidden" aria-hidden="true">Оставьте заявку, и&nbsp;мы&nbsp;ответим на&nbsp;ваши вопросы</p>
+                </div>
+                <div class="main-form__img">
+                    <picture>
+                        <source srcset="img/form-bg.webp" type="image/webp" media="(min-width: 1460.98px)">
+                        <source srcset="img/form-bg.jpg" media="(min-width: 1460.98px)">
+                        <source srcset="img/form-bg-1280.webp" type="image/webp">
+                        <source srcset="img/form-bg-1280.jpg">
+                        <img src="img/form-bg.jpg" alt>
+                    </picture>
+                </div>
+                <div class="form__fieldsets">
+                    <fieldset class="form__fieldset">
+                        <legend class="form__legend">Контактные данные</legend>
+                        <div class="form__grid">
+                            <div class="item-form error">
+                                <input type="text" placeholder="Имя" aria-required="true">
+                                <span data-error>Заполните поле</span>
+                            </div>
+                            <div class="item-form">
+                                <input type="tel" placeholder="+7 999 999-99-99" aria-required="true">
+                                <span data-error></span>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form__fieldset">
+                        <legend class="form__legend">Кратко расскажите о вашем проекте</legend>
+                        <div class="item-form">
+                            <textarea placeholder="Какой объект вы планируете построить?"
+                                oninput="this.style.height = '';this.style.height = this.scrollHeight + 'px'"></textarea>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="form__footer">
+                    <button type="submit" class="btn stroke-btn"><span>Заказать звонок</span></button>
+                    <label class="item-checkbox">
+                        <input type="checkbox">
+                        <span>Даю согласие на обработку моих данных в&nbsp;соответствии с <a href="#" target="_blank" class="border-link">политикой</a></span>
+                    </label>
+                </div>
+            </form>
         </div>
     </div>
 </section>
@@ -585,7 +639,10 @@
                     </div>
                 </section>
                 <!--main-form-->
-<section class="section main-form" data-animation="fade">
+
+
+    <section class="section main-form" data-animation="fade">
+
     <div class="container">
         <div class="main-form__inner">
             <form class="form" onsubmit="event.preventDefault();formReset(this);openSuccessMod(false,'Наш специалист свяжется с&nbsp;вами в&nbsp;время.')">
@@ -940,7 +997,10 @@
                     </div>
                 </section>
                 <!--main-form-->
-<section class="section main-form" data-animation="fade">
+
+
+    <section class="section main-form" data-animation="fade">
+
     <div class="container">
         <div class="main-form__inner">
             <form class="form" onsubmit="event.preventDefault();formReset(this);openSuccessMod(false,'Наш специалист свяжется с&nbsp;вами в&nbsp;время.')">

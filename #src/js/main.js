@@ -418,7 +418,7 @@ function addFile(files, item) {
             reader.onload = () => {
                 item.querySelector(".file-form__items").insertAdjacentHTML("afterbegin", `<div class="file-form__item">
                         <div class="file-form__name">${file.name}</div>
-                        <button class="btn-cross file-form__del"></button>
+                        <button type="button" class="btn-cross file-form__del"></button>
                     </div>`)
             }
             reader.onerror = () => {
@@ -665,6 +665,7 @@ function animate() {
     });
 }
 animate()
+window.addEventListener('load', animate)
 window.addEventListener("orientationchange", animate)
 window.addEventListener("scroll", animate)
 //menu
