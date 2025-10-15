@@ -54,8 +54,6 @@ function enableScroll() {
         }
         document.body.style.paddingRight = '0px'
         document.body.classList.remove("no-scroll")
-        document.documentElement.classList.remove("no-scroll");
-
         // для IOS
         if (isIOS) {
             document.body.style.position = '';
@@ -75,7 +73,6 @@ function disableScroll() {
         }
         document.body.style.paddingRight = paddingValue
         document.body.classList.add("no-scroll");
-        document.documentElement.classList.add("no-scroll");
         // для IOS
         if (isIOS) {
             let scrollY = window.scrollY;
