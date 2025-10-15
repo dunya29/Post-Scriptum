@@ -762,21 +762,9 @@ blockquote:before {
   background: var(--white-color);
 }
 
-.gray-sec .second-btn:hover,
-.gray-sec .second-btn:active,
-.gray-bg .second-btn:hover,
-.gray-bg .second-btn:active {
-  background: var(--white-color);
-}
-
 .white-bg .main-btn,
 .white-bg .link-btn,
 .white-bg .nav-btn {
-  background: var(--light-gray-color);
-}
-
-.white-bg .second-btn:hover,
-.white-bg .second-btn:active {
   background: var(--light-gray-color);
 }
 

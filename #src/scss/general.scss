@@ -392,22 +392,10 @@ blockquote {
 	.main-btn, .link-btn, .nav-btn {
 		background: var(--white-color);
 	}
-	.second-btn {
-		&:hover,
-		&:active {
-			background: var(--white-color);
-		}
-	}
 }
 .white-bg {
 	.main-btn, .link-btn, .nav-btn {
 		background: var(--light-gray-color);
-	}
-	.second-btn {
-		&:hover,
-		&:active {
-			background: var(--light-gray-color);
-		}
 	}
 }
 .section {
