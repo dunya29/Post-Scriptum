@@ -33,6 +33,14 @@
             }
         }
     }
+    .main-btn {
+        &:hover, &:active {
+            background: var(--white-color)!important;
+            span {
+                color: var(--black-color);
+            }
+        }
+    }
     &__inner {
         padding: 40px 55px;
         border-radius: 40px;

@@ -2622,6 +2622,16 @@ blockquote:before {
   margin-right: 11px;
 }
 
+.main-form .main-btn:hover,
+.main-form .main-btn:active {
+  background: var(--white-color) !important;
+}
+
+.main-form .main-btn:hover span,
+.main-form .main-btn:active span {
+  color: var(--black-color);
+}
+
 .main-form__inner {
   padding: 40px 55px;
   border-radius: 40px;
