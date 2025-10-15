@@ -1,3 +1,5 @@
+let isIOS = checkIOS() 
+let isFirefox = typeof InstallTrigger !== 'undefined';
 const preloader = document.querySelector(".preloader") 
 let preloaderHiddenTimeOut = 0
 if (preloader) {
@@ -44,7 +46,6 @@ function checkIOS() {
         (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream)
     );
 }
-let isIOS = checkIOS()
 //enable scroll
 function enableScroll() {
     if (!document.querySelector(".modal.open")) {
@@ -145,7 +146,6 @@ function tabSwitch(nav, block) {
 }
 // custom scroll FF
 const customScroll = document.querySelectorAll(".custom-scroll")
-let isFirefox = typeof InstallTrigger !== 'undefined';
 if (isFirefox) {
     document.documentElement.style.scrollbarColor = "#231F20 transparent"
 }
