@@ -1700,8 +1700,8 @@ blockquote:before {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1713,6 +1713,7 @@ blockquote:before {
   justify-content: center;
   background-color: var(--white-color);
   z-index: 1000;
+  overflow: hidden;
   -webkit-transition: visibility 0.6s ease, opacity 0.6s ease;
   transition: visibility 0.6s ease, opacity 0.6s ease;
 }
