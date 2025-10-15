@@ -227,6 +227,7 @@ blockquote {
 .stroke-btn {
 	padding: 20.5px 27px;
 	border-radius: 80px;
+	border: 1px solid transparent;
 	span {
 		font-weight: 500;
 		transition: all 0.3s linear;
@@ -252,7 +253,11 @@ blockquote {
 	}
 	&:hover,
 	&:active {
-		background: var(--black-color);
+		background: var(--white-color);
+		border-color: var(--primary-color);
+		span {
+			color: var(--black-color);
+		}
 	}
 }
 .stroke-btn {
@@ -369,7 +374,7 @@ blockquote {
 	transition: all 0.3s linear;
 	&:hover,
 	&:active {
-		background: var(--black-color)!important;
+		background: var(--black-color) !important;
 		svg {
 			fill: var(--white-color);
 		}
@@ -389,12 +394,16 @@ blockquote {
 }
 .gray-sec,
 .gray-bg {
-	.main-btn, .link-btn, .nav-btn {
+	.main-btn,
+	.link-btn,
+	.nav-btn {
 		background: var(--white-color);
 	}
 }
 .white-bg {
-	.main-btn, .link-btn, .nav-btn {
+	.main-btn,
+	.link-btn,
+	.nav-btn {
 		background: var(--light-gray-color);
 	}
 }

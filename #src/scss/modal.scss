@@ -120,12 +120,6 @@
         }
         .second-btn {
             border: 1px solid var(--white-color);
-            &:hover, &:active {
-                background: var(--white-color);
-                span {
-                    color: var(--black-color);
-                }
-            }
         }
         .form__footer {
             flex-direction: column-reverse;

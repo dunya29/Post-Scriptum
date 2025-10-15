@@ -15,6 +15,14 @@
         font-size: 20px;
         padding-top: 14px;
         padding-bottom: 14px;
+        &:hover,
+        &:active {
+            border-color: var(--black-color);
+            background: var(--black-color);
+            span {
+                color: var(--white-color);
+            }
+        }
     }
     &--main {
         .header__logo {
