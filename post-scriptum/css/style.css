@@ -3967,6 +3967,10 @@ blockquote:before {
     padding: 13px;
   }
 
+  .file-form label {
+    padding: 14px;
+  }
+
   .item-form input,
   .item-form textarea,
   .item-form [data-error] {
@@ -4227,13 +4231,16 @@ blockquote:before {
   }
 
   .file-form {
-    width: 100%;
+    width: 191px;
   }
 
-  .file-form label,
-  .file-form__item {
-    width: 100%;
-    max-width: 320px;
+  .file-form__del {
+    width: 40px;
+  }
+
+  .file-form__del:before,
+  .file-form__del:after {
+    width: 20px;
   }
 
   .item-checkbox span {
