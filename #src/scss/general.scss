@@ -19,6 +19,9 @@ body,
 		border-radius: 8px;
 	}
 }
+html {
+	position: relative;
+}
 body {
 	min-width: 320px;
 	background: var(--white-color);
