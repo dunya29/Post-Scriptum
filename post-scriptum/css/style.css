@@ -2337,12 +2337,61 @@ blockquote:before {
   height: 100%;
 }
 
-.team {
+.team,
+.news,
+.recommend {
   overflow: hidden;
 }
 
-.team .swiper {
+.team .swiper,
+.news .swiper,
+.recommend .swiper {
   overflow: visible;
+}
+
+.team .sec-top,
+.news .sec-top,
+.recommend .sec-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.team .sec-top .nav-btns,
+.news .sec-top .nav-btns,
+.recommend .sec-top .nav-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.team .sec-top .nav-btn,
+.news .sec-top .nav-btn,
+.recommend .sec-top .nav-btn {
+  background: var(--light-gray-color);
+  margin-left: 16px;
+}
+
+.team .sec-top .nav-btn.swiper-button-disabled,
+.news .sec-top .nav-btn.swiper-button-disabled,
+.recommend .sec-top .nav-btn.swiper-button-disabled {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.team .sec-top .nav-btn.swiper-button-disabled svg,
+.news .sec-top .nav-btn.swiper-button-disabled svg,
+.recommend .sec-top .nav-btn.swiper-button-disabled svg {
+  opacity: 0.5;
 }
 
 .item-team {
@@ -3482,6 +3531,10 @@ blockquote:before {
     max-width: 485px;
   }
 
+  .team .sec-top .nav-btn {
+    display: none;
+  }
+
   .team .swiper-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -4324,6 +4377,12 @@ blockquote:before {
     height: 50px;
     padding: 9px;
     margin-bottom: 10px;
+  }
+
+  .team .sec-top .nav-btn,
+  .news .sec-top .nav-btn,
+  .recommend .sec-top .nav-btn {
+    display: none;
   }
 
   .team .swiper-wrapper {

@@ -1,6 +1,6 @@
-let isIOS = checkIOS() 
+let isIOS = checkIOS()
 let isFirefox = typeof InstallTrigger !== 'undefined';
-const preloader = document.querySelector(".preloader") 
+const preloader = document.querySelector(".preloader")
 let preloaderHiddenTimeOut = 0
 if (preloader) {
     preloaderHiddenTimeOut = 1400
@@ -339,7 +339,7 @@ function formReset(form) {
         }
         if (["checkbox", "radio"].includes(inp.type) && !inp.classList.contains("required")) {
             inp.checked = false
-            inp.setAttribute("aria-checked","false")
+            inp.setAttribute("aria-checked", "false")
         }
     })
     if (form.querySelector("textarea")) {
@@ -538,6 +538,10 @@ if (swiper4.length) {
                 type: "bullets",
                 clickable: true,
             },
+            navigation: {
+                prevEl: item.querySelector(".nav-btn--prev"),
+                nextEl: item.querySelector(".nav-btn--next"),
+            },
             breakpoints: {
                 1460.98: {
                     slidesPerView: 4,
@@ -578,6 +582,10 @@ if (swiper2.length) {
                 el: item.querySelector(".swiper-pagination"),
                 type: "bullets",
                 clickable: true,
+            }, 
+            navigation: {
+                prevEl: item.querySelector(".nav-btn--prev"),
+                nextEl: item.querySelector(".nav-btn--next"),
             },
             breakpoints: {
                 1030.98: {
@@ -647,6 +655,10 @@ if (teamSwiper) {
                 observer: true,
                 observeParents: true,
                 watchSlidesProgress: true,
+                navigation: {
+                    prevEl: document.querySelector(".team .nav-btn--prev"),
+                    nextEl: document.querySelector(".team .nav-btn--next"),
+                },
                 speed: 800,
             });
         } else if (window.innerWidth < bp.largeDesktop && isInitialized) {
