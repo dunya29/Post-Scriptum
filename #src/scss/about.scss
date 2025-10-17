@@ -174,12 +174,15 @@
     }
 }
 .team,
-.news,
 .recommend {
     overflow: hidden;
     .swiper {
         overflow: visible;
     }
+}
+.team,
+.news,
+.recommend {
     .sec-top {
         display: flex;
         align-items: center;

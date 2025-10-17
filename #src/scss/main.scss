@@ -52,10 +52,6 @@
     }
 }
 .recommend {
-    overflow: hidden;
-    .swiper {
-        overflow: visible;
-    }
     @media (max-width: $bp4) {
         padding: 30px 0;
         background: var(--light-gray-color);

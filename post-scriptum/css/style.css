@@ -2338,13 +2338,11 @@ blockquote:before {
 }
 
 .team,
-.news,
 .recommend {
   overflow: hidden;
 }
 
 .team .swiper,
-.news .swiper,
 .recommend .swiper {
   overflow: visible;
 }
@@ -2803,14 +2801,6 @@ blockquote:before {
 .clients__item .media-contain {
   width: 100%;
   height: 100%;
-}
-
-.recommend {
-  overflow: hidden;
-}
-
-.recommend .swiper {
-  overflow: visible;
 }
 
 .item-rec {
